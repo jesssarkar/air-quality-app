@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
+import CitySearch from './CitySearch';
 
 function App() {
 const [airQualityData, setAirQualityData] = useState(null)
@@ -20,13 +21,16 @@ const [error, setError] = useState(null)
       }
     } catch (error) {
       console.error("newwork error:", error)
-      //set error state
-      //set air quality data to null
+      setError('Sorry, something went wrong')
+      setAirQualityData(null)
     }
   }
 
   return (
-   <h1>Hello World</h1>
+    <div>
+   <h1>Air Quality Index Checker</h1>
+   <CitySearch getAirQuality={getAirQuality}/>
+   </div>
   );
 }
 
