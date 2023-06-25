@@ -25,7 +25,7 @@ const [error, setError] = useState(null)
       }
     } catch (error) {
       console.error("newwork error:", error)
-      setError('Sorry, something went wrong')
+      setError('Sorry, something went wrong.')
       setAirQualityData(null)
     }
   }
