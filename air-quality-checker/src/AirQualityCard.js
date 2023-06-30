@@ -10,7 +10,7 @@ const getCardColor = (aqi) => {
     } else if (aqi <= 300) {
         return 'bg-very-unhealthy text-white';
     } else {
-        return 'bg-hazardous';
+        return 'bg-hazardous text-white';
     }
 }
 
